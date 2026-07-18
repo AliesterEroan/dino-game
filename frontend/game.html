@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Jump</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Dino Jump</h1>
+            <div class="score-display">
+                <span>Score: <span id="current-score">0</span></span>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas"></canvas>
+            
+            <div class="overlay" id="start-screen">
+                <h2>Ready to Jump?</h2>
+                <button id="start-btn" class="btn btn-primary">Start Game</button>
+            </div>
+            
+            <div class="overlay hidden" id="pause-screen">
+                <h2>Paused</h2>
+                <button id="resume-btn" class="btn btn-primary">Resume</button>
+            </div>
+            
+            <div class="overlay hidden" id="game-over-screen">
+                <h2>Game Over!</h2>
+                <p>Your Score: <span id="final-score">0</span></p>
+                <div class="player-name-input">
+                    <input type="text" id="player-name" placeholder="Enter your name" maxlength="20">
+                </div>
+                <button id="save-score-btn" class="btn btn-primary">Save Score</button>
+                <button id="replay-btn" class="btn btn-secondary">Play Again</button>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="pause-btn" class="btn btn-secondary">Pause</button>
+        </div>
+        
+        <div class="scoreboard">
+            <h3>High Scores</h3>
+            <ul id="score-list">
+                <li>Loading...</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
